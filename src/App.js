@@ -16,6 +16,7 @@ function App() {
     filterHandler();
   }, [todos, status]);
 
+
   //functions/events
 
   const filterHandler = () => {
@@ -31,7 +32,6 @@ function App() {
           break;
     }
   }
-
   return (
     <div className="App">
       <header>
@@ -43,7 +43,6 @@ function App() {
         todos = {todos}
         setTodos = {setTodos}  //passing this down to the Form.js
         setStatus={setStatus}
-        filteredTodos={filteredTodos}
       />
       <TodoList 
         inputText={inputText}

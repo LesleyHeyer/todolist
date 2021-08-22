@@ -15,12 +15,12 @@ const Form = ({ inputText, setInputText, setTodos, todos, setStatus, filteredTod
             ...todos, 
             { text: inputText, completed: false, id: Math.random() * 1000 },
         ]);
-        setInputText=('');
+        setInputText('');
     };
 
     const statusHandler = (e) => {
         setStatus(e.target.value);
-        setInputText('');
+      
     }
 
     return (

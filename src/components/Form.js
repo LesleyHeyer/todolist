@@ -20,6 +20,7 @@ const Form = ({ inputText, setInputText, setTodos, todos, setStatus, filteredTod
 
     const statusHandler = (e) => {
         setStatus(e.target.value);
+        setInputText('');
     }
 
     return (

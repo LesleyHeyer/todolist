@@ -43,17 +43,17 @@ function App() {
     }
   }
 
-  //save local
+  //save local - saving and pushing whatever we have in our state
   const saveLocalTodos = () => {
       localStorage.setItem('todos', JSON.stringify(todos));
   };
 
-  const getLocalTodos = () => { //
+  const getLocalTodos = () => { //to get the saved local todos
     if(localStorage.getItem('todos') === null ) {
       localStorage.setItem('todos', JSON.stringify([]));
     } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
+      let todoLocal = JSON.parse(localStorage.getItem('todos')); //gets local todos
+      setTodos(todoLocal); //push it up to state
     }
   };
 
